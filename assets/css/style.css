@@ -6784,17 +6784,19 @@ body.open-overlay #overlay{
 }
 .slider-opt03__layout01 .media{
     z-index: 10;
-    background-image: url('../images/test\ Shower\ gel\ banner\ 2.jpg');
+    background-image: url('../images/test\ 2Shower\ gel\ banner\ 2\ bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 660px;
 }
+
+ /* sliders editing elements  */
 .slider-opt03__layout01 .media .child-elememt{
     display: inline-block;
     position: absolute;
-    top: 4%;
-    right: 35%;
+    top: -5%;
+    right: 15%;
     z-index: 5;
     margin-top: 10px;
     margin-right: -2px;
@@ -6811,8 +6813,8 @@ body.open-overlay #overlay{
 .slider-opt03__layout01 .text-content{
     display: inline-block;
     position: absolute;
-    top: 18%;
-    right: 13%;
+    top: 24%;
+    right: 40%;
     margin: 0 5px 0 0;
     z-index: 20;
     -webkit-transition: transform 0.7s ease 0.7s;
@@ -6838,12 +6840,13 @@ body.open-overlay #overlay{
     transform: scale(1);
 }
 .slider-opt03__layout01 .text-content .first-line{
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'One Stroke Script LET', cursive; /* Specify the font-family */
     font-size: 30px;
     line-height: 1;
     color: #000000;
     display: block;
     margin: 0;
+    font-weight: 700;
 }
 .slider-opt03__layout01 .text-content .second-line{
     font-size: 60px;
@@ -6852,7 +6855,9 @@ body.open-overlay #overlay{
     font-weight: 700;
     display: block;
     margin: 0;
-    max-width: 365px;
+    max-width: max-content;
+    font-weight: 700;
+
 }
 .slider-opt03__layout01 .text-content .third-line{
     font-size: 22px;

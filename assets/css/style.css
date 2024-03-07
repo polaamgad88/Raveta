@@ -6788,7 +6788,7 @@ body.open-overlay #overlay{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 660px;
+    height: 838px;
 }
 
  /* sliders editing elements  */
@@ -6814,7 +6814,7 @@ body.open-overlay #overlay{
     display: inline-block;
     position: absolute;
     top: 24%;
-    right: 40%;
+    right: 50%;
     margin: 0 5px 0 0;
     z-index: 20;
     -webkit-transition: transform 0.7s ease 0.7s;

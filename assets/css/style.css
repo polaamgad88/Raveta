@@ -759,7 +759,7 @@ body{
     width: 100%;
 }
 .hero-background{
-    background-image: url('../images/hero_bg.jpg');
+    /* background-image: url('../images/Body\ Care\ Banner.jpg'); */
     height: 194px;
     background-position: center;
     background-repeat: no-repeat;
@@ -6784,11 +6784,12 @@ body.open-overlay #overlay{
 }
 .slider-opt03__layout01 .media{
     z-index: 10;
-    background-image: url('../images/test\ 2Shower\ gel\ banner\ 2\ bg.jpg');
+    background-image: url('../images/test2banner.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size:  contain;
     height: 838px;
+    width: max-content;
 }
 
  /* sliders editing elements  */

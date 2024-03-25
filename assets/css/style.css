@@ -8031,11 +8031,23 @@ body.open-overlay #overlay {
 
 .slider-opt03__layout01 .media {
     z-index: 10;
-    background-image: url('../images/banner1.jpg');
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     height: 838px;
+}
+
+.img1 {
+    background-image: url('../images/banner1.jpg');
+}
+
+.img2 {
+    background-image: url('../images/banner-2.jpg');
+    
+}
+.img3{
+    background-image: url('../images/banner-1.jpg');
 }
 
 /* sliders editing elements  */
@@ -8057,6 +8069,8 @@ body.open-overlay #overlay {
     -o-transform: scale(0);
     transform: scale(0);
 }
+
+
 
 .slider-opt03__layout01 .text-content {
     display: inline-block;

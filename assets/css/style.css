@@ -7955,7 +7955,7 @@ body.open-overlay #overlay {
 
 .main-slide .slick-arrow {
     font-size: 44px;
-    color: #e6e6e6;
+    color: grey;
     position: absolute;
     top: 50%;
     margin-top: -22px;
@@ -8055,7 +8055,7 @@ body.open-overlay #overlay {
     display: inline-block;
     position: absolute;
     top: -5%;
-    right: 15%;
+    right: 3%;
     z-index: 5;
     margin-top: 10px;
     margin-right: -2px;
@@ -13671,6 +13671,7 @@ body.open-quickview-block .biolife-quickview-block {
     .header-area.layout-05 .biolife-logo {
         display: block;
         margin-top: 5px;
+        
     }
 
     .header-area .header-middle {

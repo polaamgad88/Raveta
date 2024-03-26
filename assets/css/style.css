@@ -8098,11 +8098,12 @@ body.open-overlay #overlay {
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1199px) {
     .slider-opt03__layout01 .text-content {
         display: none; /* Hide the text content */
     }
 }
+
 
 .slick-slide.slick-active .slider-opt03__layout01 .text-content,
 .slick-slide.slick-active .slider-opt03__layout01 .media .child-elememt {

@@ -17360,3 +17360,19 @@ body.open-quickview-block .biolife-quickview-block {
         display: none !important;
     }
 }
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    display: flex;
+    flex: 0 0 calc(33.333% - 20px);
+    /* Adjust the width as needed */
+    margin-right: 20px;
+    /* Adjust the margin between products */
+    margin-bottom: 20px;
+    /* Adjust the margin between rows */
+    box-sizing: border-box;
+}

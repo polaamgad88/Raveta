@@ -2449,8 +2449,8 @@ body.open-mobile-search .header-area.layout-02 {
 }
 
 .product-item {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .biolife-carousel.nav-center-02 .slick-arrow,
@@ -3145,7 +3145,7 @@ body.open-mobile-search .header-area.layout-02 {
 }
 
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-    @media {
+    @media screen {
         /*
       Define here the CSS styles applied only to Safari browsers
       (any version and any device)
@@ -14825,10 +14825,6 @@ body.open-quickview-block .biolife-quickview-block {
     .product-category .products-list {
         padding-left: 7px;
         padding-right: 7px;
-    }
-
-    .product-category .products-list .product-item {
-        padding: 0 7px;
     }
 
     .footer-phone-info .r-info {

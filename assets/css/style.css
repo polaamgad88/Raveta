@@ -1827,8 +1827,10 @@ body.open-mobile-search .header-area.layout-02 {
 /* Adjust the background image for mobile view */
 @media only screen and (max-width: 767px) {
     .hero-section {
-        background-size: 300%; /* Cover the entire container */
-        background-position: center; /* Center the background image */
+        background-size: 300%;
+        /* Cover the entire container */
+        background-position: center;
+        /* Center the background image */
     }
 }
 
@@ -1844,6 +1846,7 @@ body.open-mobile-search .header-area.layout-02 {
         display: none;
     }
 }
+
 .contain-product__deal-layout .slide-down-box .message,
 .contain-product.layout-default .slide-down-box .message {
     font-size: 14px;
@@ -2443,6 +2446,11 @@ body.open-mobile-search .header-area.layout-02 {
 
 .biolife-products-block .products-list .product-item {
     list-style: none;
+}
+
+.product-item {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .biolife-carousel.nav-center-02 .slick-arrow,
@@ -8066,9 +8074,10 @@ body.open-overlay #overlay {
 
 .img2 {
     background-image: url('../images/banner-2.jpg');
-    
+
 }
-.img3{
+
+.img3 {
     background-image: url('../images/banner-1.jpg');
 }
 
@@ -8097,7 +8106,7 @@ body.open-overlay #overlay {
 .slider-opt03__layout01 .text-content {
     display: inline-block;
     position: absolute;
-    
+
     margin: 0 5px 0 0;
     z-index: 20;
     -webkit-transition: transform 0.7s ease 0.7s;
@@ -8114,15 +8123,18 @@ body.open-overlay #overlay {
     border-color: rgb(102, 102, 102);
     padding: 20px 50px 40px;
 }
+
 @media only screen and (max-width: 768px) {
     .slider-opt03__layout01 .text-content {
-        display: none; /* Hide the text content */
+        display: none;
+        /* Hide the text content */
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .slider-opt03__layout01 .text-content {
-        display: none; /* Hide the text content */
+        display: none;
+        /* Hide the text content */
     }
 }
 
@@ -13704,7 +13716,7 @@ body.open-quickview-block .biolife-quickview-block {
     .header-area.layout-05 .biolife-logo {
         display: block;
         margin-top: 5px;
-        
+
     }
 
     .header-area .header-middle {

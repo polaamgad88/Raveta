@@ -1822,6 +1822,28 @@ body.open-mobile-search .header-area.layout-02 {
     margin-bottom: 11px;
 }
 
+
+
+/* Adjust the background image for mobile view */
+@media only screen and (max-width: 767px) {
+    .hero-section {
+        background-size: 300%; /* Cover the entire container */
+        background-position: center; /* Center the background image */
+    }
+}
+
+/* making show more not appear in mobile view */
+@media only screen and (max-width: 767px) {
+    .slide-down-box {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .slide-down-box {
+        display: none;
+    }
+}
 .contain-product__deal-layout .slide-down-box .message,
 .contain-product.layout-default .slide-down-box .message {
     font-size: 14px;

@@ -17376,3 +17376,25 @@ body.open-quickview-block .biolife-quickview-block {
     /* Adjust the margin between rows */
     box-sizing: border-box;
 }
+
+.sent-message {
+    color: green;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.loading {
+    color: orange;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.error {
+    color: red;
+    background: black;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}

@@ -3661,6 +3661,11 @@ body.open-mobile-search .header-area.layout-02 {
     display: block;
 }
 
+.footer-phone-info  span {
+    display: block;
+    font-size: 20px;
+}
+
 .footer-phone-info.mode-03,
 .footer-phone-info.mode-02 {
     margin-top: 31px;
@@ -4859,7 +4864,7 @@ body.open-overlay #overlay {
 }
 
 .background-footer-03 {
-    background-color: #fafafa;
+    background-color: #f0f0f0;
 }
 
 .mobile-block-global {
@@ -14828,7 +14833,7 @@ body.open-quickview-block .biolife-quickview-block {
     }
 
     .footer-phone-info .r-info {
-        font-size: 16px;
+        font-size: 20px;
         padding-left: 15px;
     }
 

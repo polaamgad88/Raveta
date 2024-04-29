@@ -8086,8 +8086,12 @@ body.open-overlay #overlay {
     background-image: url('../images/banner-1.jpg');
 }
 
+.img4 {
+    background-image: url('../images/all\ of\ products\ banner.jpg');
+}
+
 /* sliders editing elements  */
-.slider-opt03__layout01 .media .child-elememt {
+.slider-opt03__layout01 .media .child-elememt{
     display: inline-block;
     position: absolute;
     top: -5%;
@@ -8101,17 +8105,21 @@ body.open-overlay #overlay {
     transition: transform 0.7s ease 0.7s;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
-    -ms-transform: scale(0);
+    -ms-transform: scale(0);    
     -o-transform: scale(0);
     transform: scale(0);
 }
 
+.custom-center {
+    position: fixed;
+    bottom: -5%;
+    left: 40%;
+}
 
 
 .slider-opt03__layout01 .text-content {
     display: inline-block;
     position: absolute;
-
     margin: 0 5px 0 0;
     z-index: 20;
     -webkit-transition: transform 0.7s ease 0.7s;
@@ -8128,6 +8136,8 @@ body.open-overlay #overlay {
     border-color: rgb(102, 102, 102);
     padding: 20px 50px 40px;
 }
+
+
 
 @media only screen and (max-width: 768px) {
     .slider-opt03__layout01 .text-content {

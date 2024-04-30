@@ -3661,7 +3661,7 @@ body.open-mobile-search .header-area.layout-02 {
     display: block;
 }
 
-.footer-phone-info  span {
+.footer-phone-info span {
     display: block;
     font-size: 20px;
 }
@@ -8070,7 +8070,7 @@ body.open-overlay #overlay {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    height: 700px;
+    height: 710px;
 }
 
 .img1 {
@@ -8090,14 +8090,11 @@ body.open-overlay #overlay {
     background-image: url('../images/all\ of\ products\ banner.jpg');
 }
 
-/* sliders editing elements  */
-.slider-opt03__layout01 .media .child-elememt{
+.slider-opt03__layout01 .media .child-elememt {
     display: inline-block;
     position: absolute;
-    top: -5%;
     right: 3%;
     z-index: 5;
-    margin-top: 10px;
     margin-right: -2px;
     -webkit-transition: transform 0.7s ease 0.7s;
     -moz-transition: transform 0.7s ease 0.7s;
@@ -8105,15 +8102,15 @@ body.open-overlay #overlay {
     transition: transform 0.7s ease 0.7s;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
-    -ms-transform: scale(0);    
+    -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
 }
 
+
 .custom-center {
     position: fixed;
     bottom: -5%;
-    left: 40%;
 }
 
 

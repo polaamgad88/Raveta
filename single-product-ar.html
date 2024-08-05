@@ -35,90 +35,6 @@
     <link rel="stylesheet" href="assets/css/main-color.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      // $(document).ready(function () {
-      //   var urlParams = new URLSearchParams(window.location.search);
-      //   var b = new URLSearchParams(window.location.search);
-      //   var holder = "";
-      //   var back_link = document.getElementById("back_link");
-      //   if (b.get("b") == 1) {
-      //     b = "body-care.html";
-      //     holder = "Body Care";
-      //   } else {
-      //     b = "hair-care.html";
-      //     holder = "Hair care";
-      //   }
-      //   back_link.setAttribute("href", b);
-      //   back_link.textContent = holder;
-      //   var id = urlParams.get("id");
-      //   console.log("ID:", id);
-      //   // var languageLink = document.getElementById("languageLink");
-      //   // if (id) {
-      //   //   languageLink.href = "single-product-ar.html?id=" + id;
-      //   // }
-      //   $.ajax({
-      //     url: "https://zerofrizz.co.uk/api/product/find/" + id,
-      //     type: "GET",
-      //     success: function (response) {
-      //       var product = response.data;
-      //       console.log(product);
-      //       if (product) {
-      //         var imagePath = product.image_paths[0].replace("\\", "/");
-      //         imagePath = "https://zerofrizz.co.uk/api/images/" + imagePath;
-      //         $("#product_image").attr("src", imagePath);
-      //         $(".product-big-img").attr({ src: imagePath });
-      //         $(".zoomImg").attr({ src: imagePath });
-      //         var productImages = document.getElementById("product_images");
-      //         for (var i = 0; i < product.image_paths.length; i++) {
-      //           var imagePath =
-      //             "https://zerofrizz.co.uk/api/images/" +
-      //             product.image_paths[i].replace("\\", "/");
-
-      //           var newDiv = document.createElement("div");
-      //           newDiv.classList.add("pt");
-      //           if (i === 0) {
-      //             newDiv.classList.add("active");
-      //           }
-      //           newDiv.setAttribute("id", "cont_" + (i + 1));
-      //           newDiv.setAttribute("data-imgbigurl", imagePath);
-
-      //           var newImg = document.createElement("img");
-      //           newImg.setAttribute("id", "product_image_" + (i + 1));
-      //           newImg.setAttribute("src", imagePath);
-      //           newImg.setAttribute("alt", "");
-
-      //           newDiv.appendChild(newImg);
-
-      //           productImages.appendChild(newDiv);
-      //         }
-      //         $(".product-pic-zoom").zoom();
-      //         $("#title").text(product.product_name);
-      //         $("#description").text(product.product_description);
-      //       } else {
-      //         $(".product-section").html(`<div class="section-title">
-      //                         <h2>no product</h2>
-      //                       </div>`);
-      //         $(".related-product-section").html("");
-      //       }
-      //     },
-      //     error: function (xhr, status, error) {
-      //       console.error("Error:", error);
-      //       $(".product-section").html(`<div class="section-title">
-      //                       <h2>no product</h2>
-      //                     </div>`);
-      //       $(".related-product-section").html("");
-      //     },
-      //   }).then(() => {
-      //     $(".product-thumbs").niceScroll({
-      //       cursorborder: "",
-      //       cursorcolor: "#afafaf",
-      //       boxzoom: false,
-      //     });
-
-      //     setTimeout(function () {
-      //       $(".product-thumbs").getNiceScroll().resize();
-      //     }, 1000);
-      //   });
-      // });
       $(document).ready(function () {
         var urlParams = new URLSearchParams(window.location.search);
         var b = new URLSearchParams(window.location.search);
@@ -135,7 +51,10 @@
         back_link.textContent = holder;
         var id = urlParams.get("id");
         console.log("ID:", id);
-
+        var languageLink = document.getElementById("languageLink");
+        // if (id) {
+        //   languageLink.href = "single-product-ar.html?id=" + id;
+        // }
         $.ajax({
           url: "https://zerofrizz.co.uk/api/product/find/" + id,
           type: "GET",
@@ -143,56 +62,49 @@
             var product = response.data;
             console.log(product);
             if (product) {
-              var sliderFor = $("#slider-for");
-              var sliderNav = $("#slider-nav");
-
-              // Clear existing content
-              sliderFor.empty();
-              sliderNav.empty();
-
-              // Populate the sliders with images from the product data
-              product.image_paths.forEach((imagePath, index) => {
-                var formattedPath =
+              var imagePath = product.image_paths[0].replace("\\", "/");
+              imagePath = "https://zerofrizz.co.uk/api/images/" + imagePath;
+              $("#product_image").attr("src", imagePath);
+              $(".product-big-img").attr({ src: imagePath });
+              $(".zoomImg").attr({ src: imagePath });
+              var productImages = document.getElementById("product_images");
+              for (var i = 0; i < product.image_paths.length; i++) {
+                var imagePath =
                   "https://zerofrizz.co.uk/api/images/" +
-                  imagePath.replace("\\", "/");
+                  product.image_paths[i].replace("\\", "/");
 
-                // Add image to the main slider
-                sliderFor.append(
-                  `<li>
-              <img src="${formattedPath}" alt="" width="900" height="900" />
-            </li>`
-                );
+                var newDiv = document.createElement("div");
+                newDiv.classList.add("pt");
+                if (i === 0) {
+                  newDiv.classList.add("active");
+                }
+                newDiv.setAttribute("id", "cont_" + (i + 1));
+                newDiv.setAttribute("data-imgbigurl", imagePath);
 
-                // Add image to the navigation slider
-                sliderNav.append(
-                  `<li>
-              <img src="${formattedPath}" alt="" width="88" height="88" />
-            </li>`
-                );
-              });
+                var newImg = document.createElement("img");
+                newImg.setAttribute("id", "product_image_" + (i + 1));
+                newImg.setAttribute("src", imagePath);
+                newImg.setAttribute("alt", "");
 
-              // Update other product details
+                newDiv.appendChild(newImg);
+
+                productImages.appendChild(newDiv);
+              }
+              $(".product-pic-zoom").zoom();
               $("#title").text(product.product_name);
-              $("#page_title").text(product.product_name);
               $("#description").text(product.product_description);
-              $("#desc").text(product.product_description);
-              $("#category").text(product.category);
-
-              // Reinitialize sliders
-              $(".slider-for").slick("unslick").slick();
-              $(".slider-nav").slick("unslick").slick();
             } else {
               $(".product-section").html(`<div class="section-title">
-                        <h2>no product</h2>
-                      </div>`);
+                              <h2>no product</h2>
+                            </div>`);
               $(".related-product-section").html("");
             }
           },
           error: function (xhr, status, error) {
             console.error("Error:", error);
             $(".product-section").html(`<div class="section-title">
-                      <h2>no product</h2>
-                    </div>`);
+                            <h2>no product</h2>
+                          </div>`);
             $(".related-product-section").html("");
           },
         }).then(() => {
@@ -211,6 +123,17 @@
   </head>
 
   <body class="biolife-body">
+    <!-- Preloader -->
+    <!-- <div id="biof-loading">
+        <div class="biof-loading-center">
+            <div class="biof-loading-center-absolute">
+                <div class="dot dot-one"></div>
+                <div class="dot dot-two"></div>
+                <div class="dot dot-three"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- HEADER -->
     <header id="header" class="header-area style-01 layout-03">
       <div class="header-middle biolife-sticky-object">
         <div class="container">
@@ -331,7 +254,7 @@
             <a id="back_link" href="" class="permal-link"></a>
           </li>
           <li class="nav-item">
-            <span id="page_title" class="current-page"></span>
+            <span class="current-page">Ravita shower gel Aloe Vera</span>
           </li>
         </ul>
       </nav>
@@ -345,28 +268,68 @@
           <div class="sumary-product single-layout">
             <div class="media">
               <ul
-                id="slider-for"
                 class="biolife-carousel slider-for"
                 data-slick='{"arrows":false,"dots":false,"slidesMargin":30,"slidesToShow":1,"slidesToScroll":1,"fade":true,"asNavFor":".slider-nav"}'
               >
-                <!-- Static content will be replaced dynamically -->
+                <li>
+                  <img
+                    src="assets/images/Ravita shower gel Aloe Vera - Body Care.png"
+                    alt=""
+                    width="900"
+                    height="900"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/images/post 1.jpg"
+                    alt=""
+                    width="900"
+                    height="900"
+                  />
+                </li>
               </ul>
               <ul
-                id="slider-nav"
                 class="biolife-carousel slider-nav"
                 data-slick='{"arrows":false,"dots":false,"centerMode":false,"focusOnSelect":true,"slidesMargin":10,"slidesToShow":4,"slidesToScroll":1,"asNavFor":".slider-for"}'
               >
-                <!-- Static content will be replaced dynamically -->
+                <li>
+                  <img
+                    src="assets/images/Ravita shower gel Aloe Vera - Body Care.png"
+                    alt=""
+                    width="88"
+                    height="88"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/images/post 1.jpg"
+                    alt=""
+                    width="900"
+                    height="900"
+                  />
+                </li>
               </ul>
             </div>
             <div class="product-attribute">
-              <h3 id="title" class="title"></h3>
+              <h3 class="title">Ravita shower gel Aloe Vera 1000ml</h3>
               <div class="rating">
-                <p class="star-rating"><span class="width-100percent"></span></p>
-                <b id="category" class="category"></b>
+                <p class="star-rating"><span class="width-80percent"></span></p>
+                <!-- <span class="review-count">(04 Reviews)</span> -->
+                <!-- <span class="qa-text">Q&amp;A</span> -->
+                <b class="category">Body Care</b>
               </div>
-              <!-- <span id="sku" class="sku">sku: 6223013450561</span> -->
-              <p id="description" class="excerpt"></p>
+              <span class="sku">sku: 6223013450561</span>
+              <p class="excerpt">
+                Ravita shower gel with aloe vera extract 1000ml with the
+                fragrance aloe vera makes a fine and rich foam. It delivers an
+                invigorating fresh sensation to skin. It cleanses without drying
+                out the skin.
+              </p>
+
+              <!-- <div class="shipping-info">
+                            <p class="shipping-day">3-Day Shipping</p>
+                            <p class="for-today">Pree Pickup Today</p>
+                        </div> -->
             </div>
           </div>
         </div>
@@ -378,11 +341,19 @@
               <li class="tab-element active">
                 <a href="#tab_1st" class="tab-link">Products Descriptions</a>
               </li>
+              <!-- <li class="tab-element" ><a href="#tab_2nd" class="tab-link">Addtional information</a></li>
+                            <li class="tab-element" ><a href="#tab_3rd" class="tab-link">Shipping & Delivery</a></li>
+                            <li class="tab-element" ><a href="#tab_4th" class="tab-link">Customer Reviews <sup>(3)</sup></a></li> -->
             </ul>
           </div>
           <div class="tab-content">
             <div id="tab_1st" class="tab-contain desc-tab active">
-              <p id="desc" class="desc"></p>
+              <p class="desc">
+                Ravita shower gel with aloe vera extract 1000ml with the
+                fragrance aloe vera makes a fine and rich foam. It delivers an
+                invigorating fresh sensation to skin. It cleanses without drying
+                out the skin.
+              </p>
               <div class="desc-expand">
                 <span class="title">Organic Fresh Fruit</span>
                 <ul class="list">
